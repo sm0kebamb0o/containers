@@ -40,3 +40,8 @@ func (vector *Vector[typename]) Sort(left, right int, comp func(int, int) bool) 
 	}
 	sort.Slice([]typename(*vector)[left:right], comp)
 }
+
+// Test whether vector is empty
+func (vector *Vector[typename]) Empty() bool {
+	return vector.Size() == 0
+}
